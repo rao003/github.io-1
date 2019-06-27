@@ -1,0 +1,16 @@
+
+
+*{box-sizing: border-box;}
+
+body {
+
+ text-align: center;
+ background: #555;
+ color: #fff;
+}
+
+canvas{
+  border: 3px solid #fff;
+  width: 90vw;
+  height: 100vh;
+}

@@ -1,0 +1,307 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Nunito', sans-serif;
+    font-family: 'Lato', sans-serif;
+    hyphens: auto;
+    
+}
+
+.logo{
+    width: 100%;
+    background-color: white;
+}
+.fixed{
+    position: fixed;
+    z-index: 1; /*the standart of the z-index is 0. The z-index define layers on the webpage. When we define 
+    position fixed, the box should be over everything. When I defined the "collapsible" as "relative", unfortunatelly the "collapsible" was staying over my menu. I override that putting the z-index as 1 (stronger
+    as the 0, the standart one*/
+    width: 100%;
+}
+.uppernav{
+    text-align: center;
+    background: rgb(214,11,63);
+background: linear-gradient(90deg, rgba(214,11,63,1) 0%, rgba(247,172,40,1) 53%, rgba(255,0,125,1) 100%);
+    box-shadow: -3px -3px 9px 0px rgba(209,205,209,1);
+    border-radius:4px;
+    width:100%;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    
+    
+}
+.uppernav ul li {
+    list-style-type: none;
+    display: inline-flex;
+    text-transform: uppercase;
+    padding-left: 25px;
+    
+        
+}
+.uppernav ul li a{
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+    color:#333333;
+    text-decoration: none;
+}
+.uppernav ul li a:hover{
+    transform: scale(1.05);
+}
+div.image{
+    width: 100%; /*100% Wovon? von Eltern Element*/
+    height: 60vh; 
+    background-image: url(../img/atari-3413722_1280.png);
+    background-repeat:no-repeat;
+    background-position: center;
+    
+}
+header.eins{
+    border:1px solid white;
+    margin-bottom: 90px;  /*so then the picture of the boy appears from under the fixed menu.*/
+}
+header.zwei{
+    border:1px solid white;
+    margin-bottom: 200px;
+}
+main{
+   
+    width:70%;
+    margin: 0 auto;
+    padding-top:20px;
+    
+}
+p, li, h3, h4, h2 {
+    line-height: 1.45;
+}
+img{
+    display: block;  
+}
+header div h4{
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color:#5f5e5e;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+    line-height: 1.5;
+    padding-bottom: 10px;
+}
+h3 i.fa-2x, i.fa-gamepad, i.fa-phone, i.fa-calendar-alt{
+    margin-right: 20px;
+}
+h3 i.fa-calendar-alt{
+    padding-left: 20px;
+}
+
+
+div.col-1-3 ul.center li{
+    line-height: 2.0;
+}
+a img{
+    margin:0 auto;
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+iframe{
+    margin:0 auto;
+}
+.row{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.row:after{
+    content:"";
+    clear: both;
+    display: table;
+}
+
+.col {
+    float: left;
+}
+
+.col-1-3 {
+    width: 33.33333%;
+    
+    
+}
+.col-2-3 {
+    width: 66.66666%;
+}
+.col-3-3 {
+    width: 100%;
+}
+
+.col-1-2 {
+    width:50%;
+}
+
+.col-1-4{
+    width:25%;
+    
+}
+.col-3-4{
+    width:75%;
+    
+}
+.col-1-12{
+    width: 8.33333%;
+    
+}
+.col-2-12{
+    width: 16.666667%;
+    
+}
+.col-1-5{
+    width:20%;
+
+}
+.col-4-5{
+    width:80%;
+    
+}
+.fa-phone, .fa-gamepad, .fa-map-marker-alt, .fa-calendar-alt{
+    color:#28e0b9;
+}
+.center{
+    text-align: center;
+    margin:0 auto;
+}
+
+main h3{
+    font-family: 'Nunito', sans-serif;
+    color: #333333;
+    font-weight: 700;
+    font-size: 18px;
+    
+}
+main h2{
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #333333;
+
+}
+main h4{
+    
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color:#333333
+}
+main p{
+    font-family: 'Lato', sans-serif;
+    color:#333333;
+    font-weight:400;
+    font-size: 16px;
+    
+}
+
+#email{
+    text-decoration: none;
+    color:#333333;
+    font-weight: 700;
+
+}
+
+#email:hover{
+    color:#ff8900;
+}
+
+.containerzwei{
+    border: 2px solid #5f5e5e;
+    border-radius:20px;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom:10px;
+    padding-top: 10px;
+    color: #5f5e5e;
+    margin-top: 30px;
+    background-color: #f4f4a0;
+}
+.padding{
+    padding-top: 5px;
+}
+
+#kreis{
+    border-radius: 50%;
+    width: 90%;
+    margin-left: 5px;
+}
+
+.containereins{
+    width: 100%;
+    margin:0 auto;
+    color: #333333;
+    margin-top:50px;
+    
+    
+}
+.leftcontainereins{
+    background-color: rgb(181, 252, 237);
+    padding:30px;
+}
+.rightcontainereins{
+     background-color: rgb(116, 226, 202);
+    padding:30px;
+}
+.rightcontainereins ul li{
+    list-style-type: disc;
+}
+
+.footer{
+  box-shadow: -3px -3px 9px 0px rgba(209,205,209,1);
+    padding: 4px;
+   background: rgb(214,11,63);
+background: linear-gradient(90deg, rgba(214,11,63,1) 0%, rgba(247,172,40,1) 53%, rgba(255,0,125,1) 100%); margin-top: 50px;
+}
+footer div img{
+    margin-top:10px;
+    width:110%;
+}
+footer div a{
+    color:#333333;
+    font-family: 'Lato', sans-serif;
+    font-weight:700;
+    font-size: 14px;
+    text-align: center
+}
+footer div a:hover{
+    color:#d426a5
+}
+footer h4{font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color:#333333
+}
+.pad{
+    padding:30px;
+}
+.content li{
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+	padding: 10px 25px;
+	text-align: left;
+	text-decoration: none;
+    float: none;
+	width: 100%;
+    background: #cafcf1;
+    
+    
+}
+.content {
+	left: 0px; /* left distance from die Eltern element. In this case, the collapsible*/
+    position: absolute;
+    z-index: 1;/*the standart of the z-index is 0. The z-index define layers on the webpage.  When I defined the "collapsible" as "relative", unfortunatelly the "collapsible" from the row under was staying over my "content". I override that putting the z-index as 1 (stronger
+    as the 0, the standart one) so my content could appear over the collapsible.*/
+	visibility: hidden;
+	
+}
