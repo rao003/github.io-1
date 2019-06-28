@@ -233,15 +233,12 @@ main p{
     
 }
 .leftcontainereins{
-    background-color: rgba(232, 183, 105, 0.79);
-    padding:30px;
+    background-color: rgb(255, 201, 99);
+    
 }
 .rightcontainereins{
      background-color: rgb(255, 201, 99);
-    padding:30px;
-}
-.rightcontainereins ul li{
-    list-style-type: disc;
+    
 }
 
 .footer{
@@ -292,4 +289,22 @@ footer h4{font-family: 'Lato', sans-serif;
     as the 0, the standart one) so my content could appear over the collapsible.*/
 	visibility: hidden;
 	
+}
+#myDIV1, #myDIV2{
+	display:none;
+	padding: 20px;
+}
+button{
+
+padding: 30px; 
+	width: 100%;
+	transition-duration: 0.4s;
+  transition-duration: 0.4s;
+	cursor:pointer; 
+	
+	border: 2px solid rgb(255, 201, 99);	
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+button:hover{
+background-color: rgb(255, 201, 99);	
 }

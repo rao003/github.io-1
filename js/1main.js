@@ -1,5 +1,5 @@
 var canvas;
-var canvasContext;
+var ctx;
 var ballX = 50;
 var ballY = 50;
 var ballSpeedX = 10;
@@ -42,8 +42,8 @@ function handleMouseClick(evt) {
 }
 window.onload = function () {
 	canvas = document.getElementById('gameCanvas');
-	canvasContext = canvas.getContext('2d');
-	canvasContext.font = "30px Arial";
+	ctx = canvas.getContext('2d');
+	ctx.font = "30px Arial";
 	//we now are going to set an interval for drawEverything. What we want is that the red retangle moves. Once we defined our 'var ballX', we put it in the function drawEverything the ballX+20, so the ball walks 20 pixels to the right. The red retangle defined with fillRect, recieved the "var ballX" in the place of any number, so then we make it move. 
 	var framesPerSecond = 30;
 	//setInterval(drawEverything, 1000/framesPerSecond);as the draw evoluted, was needed a function to call draw and move at the same time. 
@@ -163,23 +163,21 @@ function drawCourt() {//first, the net
 }
 
 function drawEverything() {
-	// next line blanks out th escreen with green.
+	// next line blanks out the screen with green.
 
 	colorRect(0, 0, canvas.width, canvas.height, 'green');
-	
-	
 	
 	if (showingWinScreen) {
 	
 		if (player1Score >= WINNING_SCORE) {
-			canvasContext.fillStyle = '#adff2f';
-			canvasContext.fillText("You Won!", 350, 200);
+			ctx.fillStyle = '#adff2f';
+			ctx.fillText("You Won!", 350, 200);
 		} else if (player2Score >= WINNING_SCORE) {
-			canvasContext.fillStyle = '#adff2f';
-			canvasContext.fillText("You didn't win. Try again.", 250, 200);
+			ctx.fillStyle = '#adff2f';
+			ctx.fillText("You didn't win. Try again.", 250, 200);
 		}
-		canvasContext.fillStyle = '#adff2f';
-		canvasContext.fillText("click to continue", 300, 500);
+		ctx.fillStyle = '#adff2f';
+		ctx.fillText("click to continue", 300, 500);
 		return;
 		
 	}
@@ -192,8 +190,8 @@ function drawEverything() {
 	
 	//colorRect(ballX,100,10,10,'red');
 	
-	canvasContext.fillText(player1Score, 100, 100);
-	canvasContext.fillText(player2Score, canvas.width - 100, 100);// minus 100 to give me the same distance in the canvas but in the oposite side of my tennis court.
+	ctx.fillText(player1Score, 100, 100);
+	ctx.fillText(player2Score, canvas.width - 100, 100);// minus 100 to give me the same distance in the canvas but in the oposite side of my tennis court.
 	
 	// next line draws the ball.
 	colorCircle(ballX, ballY, ballSize, 'white');
@@ -219,11 +217,11 @@ function colorCircle(centerX, centerY, radius, drawColor) {
 	//2. we first are going to put the 'ugly' function for the circle here and the 'pretty' one is going to the drawEverything
 	//colorRect(ballX,100,10,10,'red');
 	//making the ball round
-	canvasContext.fillStyle = drawColor;
+	ctx.fillStyle = drawColor;
 	//Achtung! drawColor is without the ''. 
-	canvasContext.beginPath();
-	canvasContext.arc(centerX, centerY, radius, 0, Math.PI * 2, true);
-	canvasContext.fill();
+	ctx.beginPath();
+	ctx.arc(centerX, centerY, radius, 0, Math.PI * 2, true);
+	ctx.fill();
 }
 
 function colorRect(leftX, topY, width, height, drawColor) {
@@ -233,7 +231,23 @@ function colorRect(leftX, topY, width, height, drawColor) {
 	ctx.fillRect(0,0,canvas.width, canvas.height);
 	ctx.fillStyle= 'white';
 	ctx.fillRect(0,210,10,100); we are going to give new names:*/
-	canvasContext.fillStyle = drawColor;
+	ctx.fillStyle = drawColor;
 	//instead 'black' we use the parameter that we gave in the function. The color we describe in the function drawEverything
-	canvasContext.fillRect(leftX, topY, width, height);
+	ctx.fillRect(leftX, topY, width, height);
+}
+function conteinerL() {
+  var x = document.querySelector("#myDIV1");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+function conteinerR() {
+  var x = document.querySelector("#myDIV2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
