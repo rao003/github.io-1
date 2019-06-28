@@ -181,12 +181,14 @@ function drawEverything() {
 		canvasContext.fillStyle = '#adff2f';
 		canvasContext.fillText("click to continue", 300, 500);
 		return;
+		
 	}
+	
 	drawCourt();
 	// this is LEFT player paddle.
 	colorRect(0, paddle1Y, PADDLE_THICKNESS, PADDLE_HEIGHT, '#f4187d');
 	// this is RIGHT computer paddle.
-	colorRect(canvas.width - PADDLE_THICKNESS, paddle2Y, PADDLE_THICKNESS, PADDLE_HEIGHT, 'white');// in the other side of the screen we have to discount the thickness of the paddle (otherwise the paddle wont show on the canvas)
+	colorRect(canvas.width - PADDLE_THICKNESS, paddle2Y, PADDLE_THICKNESS, PADDLE_HEIGHT, 'orange');// in the other side of the screen we have to discount the thickness of the paddle (otherwise the paddle wont show on the canvas)
 	
 	//colorRect(ballX,100,10,10,'red');
 	
@@ -194,7 +196,7 @@ function drawEverything() {
 	canvasContext.fillText(player2Score, canvas.width - 100, 100);// minus 100 to give me the same distance in the canvas but in the oposite side of my tennis court.
 	
 	// next line draws the ball.
-	colorCircle(ballX, ballY, ballSize, generateColor());
+	colorCircle(ballX, ballY, ballSize, 'white');
 	/*
 		ctx.fillStyle= 'red';// if i draw the white box after the red one, when the red starts to move, the white, that was written after, will overlapse the red. Therefore, we must write the red AFTER the white box.
 	ctx.fillRect(ballX,100,10, 10);
@@ -206,22 +208,7 @@ function drawEverything() {
 
 }
 
-function generateColor(ranges) {
-	if (!ranges) {
-		ranges = [
-      [0, 256],
-      [0, 256]
-    ];
-	}
-	var g = function () {
-		//select random range and remove
-		var range = ranges.splice(Math.floor(Math.random() * ranges.length), 1)[0];
-		//pick a random number from within the range
-		return Math.floor(Math.random() * (range[1] - range[0])) + range[0];
-	}
-	return "rgb(" + g() + "," + 255 + "," + g() + ")";
-}
-//keep it in the shage of green~^^
+
 function colorCircle(centerX, centerY, radius, drawColor) {
 	//colorRect(ballX,100,10,10,'red');
 	//making the ball round: took the colorRect from the 'drawEverything function and make this one to make it clear. -->1)how we want it to look:

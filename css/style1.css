@@ -12,12 +12,14 @@ body {
 }
 
 .logo{
-    width: 100%;
+    margin: 0 auto;
+	width: 100%;
     background-color: white;
+	
 }
 .fixed{
     position: fixed;
-    z-index: 1; /*the standart of the z-index is 0. The z-index define layers on the webpage. When we define 
+    z-index: 3; /*the standart of the z-index is 0. The z-index define layers on the webpage. When we define 
     position fixed, the box should be over everything. When I defined the "collapsible" as "relative", unfortunatelly the "collapsible" was staying over my menu. I override that putting the z-index as 1 (stronger
     as the 0, the standart one*/
     width: 100%;
@@ -63,12 +65,9 @@ div.image{
 }
 header.eins{
     border:1px solid white;
-    margin-bottom: 90px;  /*so then the picture of the boy appears from under the fixed menu.*/
+    margin-bottom: 130px;  /*so then the picture of the boy appears from under the fixed menu.*/
 }
-header.zwei{
-    border:1px solid white;
-    margin-bottom: 200px;
-}
+
 main{
    
     width:70%;
@@ -168,7 +167,7 @@ iframe{
     
 }
 .fa-phone, .fa-gamepad, .fa-map-marker-alt, .fa-calendar-alt{
-    color:#28e0b9;
+    color:rgb(182, 35, 209);
 }
 .center{
     text-align: center;
@@ -246,11 +245,11 @@ main p{
     
 }
 .leftcontainereins{
-    background-color: rgb(181, 252, 237);
+    background-color: rgba(232, 183, 105, 0.79);
     padding:30px;
 }
 .rightcontainereins{
-     background-color: rgb(116, 226, 202);
+     background-color: rgb(255, 201, 99);
     padding:30px;
 }
 .rightcontainereins ul li{
@@ -261,10 +260,10 @@ main p{
   box-shadow: -3px -3px 9px 0px rgba(209,205,209,1);
     padding: 4px;
    background: rgb(214,11,63);
-background: linear-gradient(90deg, rgba(214,11,63,1) 0%, rgba(247,172,40,1) 53%, rgba(255,0,125,1) 100%); margin-top: 50px;
+background: linear-gradient(90deg, rgba(214,11,63,1) 0%, rgba(247,172,40,1) 53%, rgba(255,0,125,1) 100%);
 }
 footer div img{
-    margin-top:10px;
+    
     width:110%;
 }
 footer div a{
